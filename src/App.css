@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: darkslategray;
 }
 
 .App-logo {
@@ -28,4 +34,27 @@
 
 .small {
   font-size: 0.75rem;
+}
+
+.polaroidOuter {
+  height: 4.2in;
+  width: 3.5in;  
+  background-color:lavender;
+  box-shadow: 5px 5px 10px;
+}
+
+.polaroidInner {
+  height: 3.1in;
+  width: 3.1in;
+  margin: 0.2in;
+  background-color: white;
+}
+
+.polaroidImg {
+  width: 100%;
+  object-fit: cover;
+}
+
+.lyrics {
+  white-space: pre-line;
 }

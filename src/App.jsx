@@ -1,27 +1,55 @@
+import React, { useState } from 'react';
 import './App.css';
+
+const DATA = [
+  {
+    title: "Exile",
+    album: "Folklore",
+    lyrics: "I think I've seen this film before\nAnd I didn't like the ending"
+  },
+]
+
+function Polaroid() {
+  const [showFront, setShowFront] = useState(true)
+  const flip = () => {
+    setShowFront(!showFront)
+  }
+
+  return (
+    <div onClick={flip}>
+      {showFront ? (
+        <PolaroidFront src="Octocat.png"></PolaroidFront>
+      ) : (
+        <PolaroidBack title={DATA[0].title} album="Folklore" lyrics={DATA[0].lyrics}></PolaroidBack>
+      )}
+    </div>
+  )
+}
+
+function PolaroidFront({ src }) {
+  return (
+    <div className="polaroidOuter">
+      <div className="polaroidInner">
+        <img className="polaroidImg" src={src} />
+      </div>
+    </div>
+  )
+}
+
+function PolaroidBack({ title, album, lyrics}) {
+  return (
+    <div className="polaroidOuter">
+      <p>{title}</p>
+      <p>{album}</p>
+      <p className="lyrics">{lyrics}</p>
+    </div>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <Polaroid></Polaroid>
     </div>
   );
 }
