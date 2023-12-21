@@ -1,0 +1,7 @@
+[done] lyrics styling
+[done] flip animation
+[done] random button icon
+background music
+christmas background
+more lyrics
+deploy

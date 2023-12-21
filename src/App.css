@@ -11,8 +11,8 @@
 .polaroidOuter {
   height: 4.2in;
   width: 3.5in;  
-  background-color:lavender;
   box-shadow: 5px 5px 10px;
+  background-color:lavender;
 }
 
 .polaroidInner {
@@ -29,6 +29,81 @@
   object-fit: cover;
 }
 
+.polaroidBack {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+p {
+  margin: 0;
+}
+
 .lyrics {
   white-space: pre-line;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 20px;
+}
+
+.title {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 25px;
+}
+
+.album {
+  font-family: 'Brush Script MT', cursive;
+}
+
+.shuffle {
+  background-color: lavender;
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  height: 60px;
+  color: black;
+}
+
+.shuffle:hover {
+  background-color: rgb(251, 251, 255);
+}
+
+.shuffle:active {
+  background-color: rgb(162, 162, 175);
+}
+
+/* Below modified from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  height: 4.2in;
+  width: 3.5in;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
 }
