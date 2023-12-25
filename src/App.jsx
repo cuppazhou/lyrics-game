@@ -27,12 +27,6 @@ const DATA = [
     lyrics: "You asked me for a place to sleep\nLocked me out and threw a feast (what?)",
   },
   {
-    image: "karma_0.jpeg",
-    title: "Karma",
-    album: "Midnights",
-    lyrics: "Karma is the guy on the screen\nComing straight home to me",
-  },
-  {
     image: "karma_1.jpeg",
     title: "Karma",
     album: "Midnights",
@@ -92,6 +86,30 @@ const DATA = [
     album: "Reputation",
     lyrics: "I want to wear his initial\nOn a chain 'round my neck, chain 'round my neck",
   },
+  {
+    image: "karma_0.jpeg",
+    title: "Karma",
+    album: "Midnights",
+    lyrics: "Karma is the guy on the screen\nComing straight home to me",
+  },
+  {
+    image: "blank_space.jpeg",
+    title: "Blank Space",
+    album: "1989",
+    lyrics: "But I've got a blank space, baby\nAnd I'll write your name",
+  },
+  {
+    image: "anti_hero.jpeg",
+    title: "Anti-Hero",
+    album: "Midnights",
+    lyrics: "I'll stare directly at the sun but never in the mirror",
+  },
+  {
+    image: "style.jpeg",
+    title: "Style",
+    album: "1989",
+    lyrics: "You got that James Dean daydream look in your eye\nAnd I got that red lip classic thing that you like",
+  },
 ]
 
 function PolaroidFront({ src }) {
@@ -125,12 +143,7 @@ function App() {
   const [showFront, setShowFront] = useState(true)
 
   const pickNext = () => {
-    let nextPosition = position
-    while (nextPosition === position || nextPosition === 0) {
-      nextPosition = Math.floor(Math.random() * DATA.length)
-    }
-    setPosition(nextPosition)
-
+    setPosition((position + 1) % DATA.length)
     setShowFront(true)
   }
 
