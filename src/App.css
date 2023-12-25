@@ -6,6 +6,7 @@
   justify-content: space-around;
   min-height: 100vh;
   background-color: darkslategray;
+  background-image: url("snow.gif");
 }
 
 .polaroidOuter {
@@ -60,6 +61,9 @@ p {
 
 .shuffle {
   background-color: lavender;
+  background-image: url("shuffle.png");
+  font-family: 'Brush Script MT', cursive;
+  font-size: 20px;
   border-radius: 10px;
   border: none;
   width: 100px;

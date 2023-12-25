@@ -3,10 +3,10 @@ import './App.css';
 
 const DATA = [
   {
-    image: "start.jpeg",
+    image: "start_2.jpeg",
     title: "Good Luck!",
     album: "",
-    lyrics: "Instructions: guess the song (and lyrics) that the picture depicts",
+    lyrics: "Instructions:\nEach picture depicts lyrics from a T.S. song.\nTry to guess the lyrics, the song that it came from, and the album.\nClick to see the answer.",
   },
   {
     image: "exile.jpeg",
